@@ -1,0 +1,143 @@
+<html>
+
+<head>
+    <meta name="robots" content="noindex">
+    <style>
+        @import url('https://fonts.googleapis.com/css2?family=Hina+Mincho&display=swap');
+        @import url("https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css");
+
+        .hina-mincho-regular {
+            font-family: "Hina Mincho", serif;
+            font-weight: 400;
+            font-style: normal;
+        }
+
+        nav {
+            display: flex;
+            align-items: center;
+            padding: 20px 8%;
+            background: #1d2026;
+            width: 100%;
+            color: #fff;
+            position: relative;
+            height: 70px;
+        }
+
+        nav .nav-logo {
+            width: 40px;
+            cursor: pointer;
+        }
+
+        nav .nav-menu {
+            flex: 1;
+            display: flex;
+            justify-content: flex-end;
+        }
+
+        nav ul {
+            display: flex;
+            margin: 0;
+            padding: 0;
+            list-style: none;
+        }
+
+        nav ul li {
+            display: inline-block;
+        }
+
+        nav ul li a {
+            text-decoration: none;
+            color: white;
+            padding: 10px 15px;
+            display: block;
+        }
+
+        .hamburger {
+            font-size: 20px;
+            display: none;
+            cursor: pointer;
+            margin-left: auto;
+        }
+
+        .hamburger:hover {
+            text-decoration: none;
+        }
+
+        /* Styles for Dropdown Menu */
+        .dropdown-menu {
+            display: none;
+            flex-direction: column;
+            width: 100%;
+            background-color: #1d2026;
+            position: absolute;
+            top: 70px;
+            left: 0;
+            z-index: 1;
+        }
+
+        .dropdown-menu.show {
+            display: flex;
+        }
+
+        .dropdown-menu li {
+            text-align: center;
+            width: 100%;
+        }
+
+        .dropdown-menu li a {
+            padding: 10px;
+            display: block;
+        }
+
+        @media screen and (max-width: 700px) {
+            nav ul {
+                display: none;
+            }
+
+            .hamburger {
+                display: block;
+            }
+
+            .dropdown-menu {
+                display: none;
+            }
+
+            .dropdown-menu.show {
+                display: flex;
+            }
+
+
+            .hina-mincho-regular {
+                margin: 0px;
+            }
+        }
+    </style>
+    <script>
+        function toggleMenu() {
+            const dropdownMenu = document.getElementById('dropdownMenu');
+            dropdownMenu.classList.toggle('show');
+        }
+    </script>
+</head>
+
+<body>
+    <nav>
+        <a href="/" title="鯱光祭TOPに戻る"><img src="/assets/favicon.png" class="nav-logo" alt="Logo"></a>
+        <div class="nav-menu">
+            <ul id="nav" class="topnav">
+                <li><a href="/visitors" class="hina-mincho-regular" style="margin-left: 40px;">ご来場の方へ</a></li>
+                <li><a href="/juniors" class="hina-mincho-regular" style="margin-left: 40px;">中学生の方へ</a></li>
+                <li><a href="/schedule/day5-6" class="hina-mincho-regular" style="margin-left: 40px;">日程・タイムテーブル</a>
+                </li>
+            </ul>
+            <span class="hamburger" onclick="toggleMenu()"><i class="fa fa-bars"></i></span>
+        </div>
+        <ul id="dropdownMenu" class="dropdown-menu">
+            <li><a href="/visitors" class="hina-mincho-regular" onclick="toggleMenu()">ご来場の方へ</a></li>
+            <li><a href="/juniors" class="hina-mincho-regular" onclick="toggleMenu()">中学生の方へ</a></li>
+            <li><a href="/schedule/day5-6" class="hina-mincho-regular" onclick="toggleMenu()">日程・タイムテーブル</a></li>
+        </ul>
+    </nav>
+</body>
+
+</html>

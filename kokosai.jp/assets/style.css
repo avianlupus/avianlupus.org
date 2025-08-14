@@ -1,0 +1,306 @@
+@import url('https://fonts.googleapis.com/css2?family=Hina+Mincho&display=swap');
+
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+body {
+    font-family: "Zen Kaku Gothic Antique", sans-serif;
+    font-weight: 400;
+    font-style: normal;
+}
+
+.bold {
+    font-family: "Zen Kaku Gothic Antique", sans-serif;
+    font-weight: 500;
+    font-style: normal;
+}
+
+.hina-mincho-regular {
+    font-family: "Hina Mincho", serif;
+    font-weight: 400;
+    font-style: normal;
+}
+
+
+
+section {
+    display: grid;
+    place-items: center;
+    align-content: center;
+    padding-top: 20vh;
+    padding-left: 10%;
+    padding-right: 10%;
+    text-align: center;
+}
+
+
+.hidden {
+    opacity: 0;
+    transition: all 1s;
+}
+
+@media(prefers-reduced-motion) {
+    .hidden {
+        transition: none;
+    }
+}
+
+.show {
+    opacity: 1;
+}
+
+
+dt {
+    width: 60%;
+    text-align: right;
+    font-weight: bold;
+    padding-right: 10px;
+}
+
+dd {
+    width: 40%;
+    text-align: left;
+    margin-left: 0;
+}
+
+dl {
+    display: flex;
+    justify-content: space-between;
+    flex-wrap: wrap;
+    align-items: center;
+    max-width: 1120px;
+}
+
+.heading,
+.heading-to-replace-when-small {
+    font-size: 35pt;
+    margin: 20px 8%;
+    font-family: "Zen Kaku Gothic Antique", sans-serif;
+    font-weight: 500;
+    font-style: normal;
+}
+
+.headings-for-smaller-screens {
+    display: none;
+}
+
+@media screen and (max-width: 550px) {
+    .heading-to-replace-when-small {
+        display: none;
+    }
+
+    .headings-for-smaller-screens {
+        display: block;
+    }
+}
+
+.subheading {
+    font-size: 20pt;
+    margin: 20px 8%;
+    font-family: "Zen Kaku Gothic Antique", sans-serif;
+    font-weight: 500;
+    font-style: normal;
+}
+
+.main-content {
+    margin: 10px 8%;
+}
+
+table {
+    border-spacing: 0px;
+    width: 100%;
+}
+
+.small-table {
+    table-layout: fixed;
+}
+
+tr {
+    text-align: left;
+}
+
+th {
+    font-size: 18px;
+    padding: 15px;
+}
+
+td {
+    padding: 15px;
+    font-size: 20px;
+}
+
+tr:nth-child(even) {
+    background-color: #e8ebf1;
+}
+
+.page-flip {
+    padding-top: 20px;
+    display: flex;
+}
+
+.page-flip-spacer {
+    flex-grow: 1;
+}
+
+.page-flip-button {
+    background-color: #1d2026;
+    border: none;
+    color: white;
+    padding: 15px;
+    text-align: center;
+    text-decoration: none;
+    display: inline-block;
+    font-size: 16px;
+    border-radius: 4px;
+}
+
+.main-page-button {
+    background-color: #1d2026;
+    border: none;
+    color: white;
+    padding: 15px;
+    text-align: center;
+    text-decoration: none;
+    display: inline-block;
+    font-size: 16px;
+    border-radius: 4px;
+}
+
+.question {
+    font-weight: 400;
+    padding-bottom: 6px;
+    font-size: 18pt;
+}
+
+.answer {
+    padding-left: 10px;
+    padding-bottom: 20px;
+    font-size: 14pt;
+}
+
+a {
+
+    text-decoration: none;
+    color: darkslateblue;
+}
+
+a:hover {
+    text-decoration: underline;
+}
+
+
+a.main-oshare-links {
+    font-family: serif;
+    font-size: 1.5em;
+    font-style: normal;
+    color: black;
+    line-height: 3;
+}
+
+.datetime {
+    min-width: 250px;
+    max-width: 400px;
+    width: 100%;
+}
+
+/* accordion */
+.small {
+    display: none;
+}
+
+@media screen and (max-width: 1200px) {
+    .small {
+        display: block;
+    }
+
+    .large {
+        display: none;
+    }
+}
+
+.accordion {
+    background-color: #eee;
+    color: #444;
+    cursor: pointer;
+    padding: 18px;
+    width: 100%;
+    border: none;
+    text-align: left;
+    outline: none;
+    font-size: 20px;
+    transition: 0.4s;
+}
+
+.active,
+.accordion:hover {
+    background-color: #ccc;
+}
+
+.accordion:after {
+    content: '\002B';
+    color: #777;
+    font-weight: bold;
+    float: right;
+    margin-left: 5px;
+}
+
+.active:after {
+    content: "\2212";
+}
+
+.panel {
+    padding: 0 18px;
+    background-color: white;
+    max-height: 0;
+    overflow: hidden;
+    transition: max-height 0.2s ease-out;
+}
+
+.panel p {
+    font-size: 18px;
+    padding: 5px 0px;
+}
+
+.location-badge {
+    background-color: #eee;
+    color: black;
+    padding: 2px 8px;
+    margin-right: 10px;
+    font-family: Arial, Helvetica, sans-serif;
+    border-radius: 3px;
+}
+
+.time-badge {
+    background-color: #444;
+    color: white;
+    padding: 4px 8px;
+    margin: 0px;
+    margin-right: 10px;
+    font-size: 18px;
+    font-family: Arial, Helvetica, sans-serif;
+    border-radius: 3px;
+}
+
+.thumbnail {
+    width: 100%;
+    padding: 4px 0px;
+}
+
+/*  */
+
+.explanation {
+    display: block;
+    line-height: 4em;
+    font-family: serif;
+    font-size: 18px;
+}
+
+.greetings {
+    display: block;
+    line-height: 3em;
+    font-family: serif;
+    font-size: 18px;
+}

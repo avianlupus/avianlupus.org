@@ -1,0 +1,78 @@
+<html>
+
+<head>
+    <meta name="robots" content="noindex">
+    <style>
+        @import url('https://fonts.googleapis.com/css2?family=Hina+Mincho&display=swap');
+
+        .hina-mincho-regular {
+            font-family: "Hina Mincho", serif;
+            font-weight: 400;
+            font-style: normal;
+        }
+
+        footer {
+            color: #777;
+            font-family: Arial, Helvetica, sans-serif;
+            text-align: center;
+            font-weight: 300;
+            padding: 20px 0;
+            background-color: #f1f1f1;
+            font-size: 15px;
+            /* padding: 10px; */
+        }
+
+
+        footer ul li {
+            display: inline-block;
+            list-style: none;
+            padding: 10px;
+        }
+
+        footer ul li a {
+            text-decoration: none;
+            color: inherit;
+            text-decoration: underline;
+        }
+
+        .small-screens {
+            display: none;
+        }
+
+        @media screen and (max-width: 550px) {
+            .small-screens {
+                display: block;
+            }
+
+            .large-screens {
+                display: none;
+            }
+        }
+    </style>
+</head>
+
+<body>
+
+    <footer>
+        <h2 class="hina-mincho-regular"><a href="/" style="color: rgba(0, 0, 0, 0.56);">第76回鯱光祭</a></h2>
+        <hr style="margin: 20px 8%; height: 1px; color: gray; background-color: gray; border: none;">
+        <div class="large-screens">Copyright © 2024年度 愛知県立旭丘高等学校生徒会・学校祭実行委員会</div>
+        <div class="small-screens">© 2024年度 愛知県立旭丘高等学校生徒会・<br>学校祭実行委員会</div>
+        <ul class="large-screens">
+            <li><a href="/policy">プライバシーポリシー</a></li>
+            <li><a href="/legal">免責事項</a></li>
+            <li><a href="/sitemap">サイトマップ</a></li>
+            <li><a href="/app">鯱光祭アプリ</a></li>
+        </ul>
+        <ul class="small-screens" style="padding-top: 5px;">
+            <li style="padding-bottom: 0px;"><a href="/policy">プライバシーポリシー</a></li>
+            <li style="padding-bottom: 0px;"><a href="/legal">免責事項</a></li>
+        </ul>
+        <ul class="small-screens">
+            <li><a href="/sitemap">サイトマップ</a></li>
+            <li><a href="/app">鯱光祭アプリ</a></li>
+        </ul>
+    </footer>
+</body>
+
+</html>
