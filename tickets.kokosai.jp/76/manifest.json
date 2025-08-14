@@ -1,0 +1,17 @@
+{
+    "name": "鯱光祭チケット予約",
+    "short_name": "鯱光祭 3年劇チケット予約",
+    "start_url": ".",
+    "display": "standalone",
+    "background_color": "#0175C2",
+    "theme_color": "#0175C2",
+    "description": "鯱光祭チケット予約システムです",
+    "orientation": "portrait-primary",
+    "prefer_related_applications": false,
+    "icons": [
+        {
+            "src": "favicon.png",
+            "type": "image/png"
+        }
+    ]
+}
